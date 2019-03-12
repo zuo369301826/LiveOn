@@ -1,0 +1,32 @@
+ManifestFileVersion: 0
+CRC: 2479291347
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: a8ad30a199d7abcb52e682e2b48611a3
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 3cb3862f9a1f40642405b7d56465fb1d
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 4
+  Script: {instanceID: 0}
+- Class: 20
+  Script: {instanceID: 0}
+- Class: 54
+  Script: {instanceID: 0}
+- Class: 81
+  Script: {instanceID: 0}
+- Class: 114
+  Script: {fileID: 11500000, guid: ae942c9068183dc40a9d01f648273726, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 2c5ecb5660b11414fb042fb826e03b73, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 2a92b5d748695fd44aac9feef17ba415, type: 3}
+- Class: 115
+  Script: {instanceID: 0}
+Assets:
+- Assets/UI/NGUIRoot/NGUIRoot.prefab
+Dependencies: []

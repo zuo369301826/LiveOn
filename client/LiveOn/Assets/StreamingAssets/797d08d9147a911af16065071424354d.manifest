@@ -1,0 +1,16 @@
+ManifestFileVersion: 0
+CRC: 522292614
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 28e7f94fe308caf603ae8e59190e4cd9
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 7e9ee104d6bb707fb2602b751e6f78b1
+HashAppended: 0
+ClassTypes:
+- Class: 48
+  Script: {instanceID: 0}
+Assets:
+- Assets/NGUI/Resources/Shaders/Unlit - Transparent Packed 2.shader
+Dependencies: []

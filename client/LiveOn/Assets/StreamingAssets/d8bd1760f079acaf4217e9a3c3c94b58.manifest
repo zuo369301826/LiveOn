@@ -1,0 +1,16 @@
+ManifestFileVersion: 0
+CRC: 3616097426
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: a6b763af6284b06780a6499e6d3d7eff
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 7e9ee104d6bb707fb2602b751e6f78b1
+HashAppended: 0
+ClassTypes:
+- Class: 48
+  Script: {instanceID: 0}
+Assets:
+- Assets/NGUI/Resources/Shaders/Unlit - Text.shader
+Dependencies: []

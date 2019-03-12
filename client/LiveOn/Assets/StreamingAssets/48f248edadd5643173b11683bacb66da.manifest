@@ -1,0 +1,16 @@
+ManifestFileVersion: 0
+CRC: 757561802
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 089a069a5a801ac42454ee397fdd425b
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: f19fbf085e00d23fbc8d6cf7b345590b
+HashAppended: 0
+ClassTypes:
+- Class: 28
+  Script: {instanceID: 0}
+Assets:
+- Assets/NGUI/Editor/Preview/Control - Colored Button.png
+Dependencies: []

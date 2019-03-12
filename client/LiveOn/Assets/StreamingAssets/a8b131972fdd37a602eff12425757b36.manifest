@@ -1,0 +1,16 @@
+ManifestFileVersion: 0
+CRC: 2769497969
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 26ce76f64a1935b8199a55744d6802e8
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: f19fbf085e00d23fbc8d6cf7b345590b
+HashAppended: 0
+ClassTypes:
+- Class: 28
+  Script: {instanceID: 0}
+Assets:
+- Assets/NGUI/Editor/Preview/Control - Simple Horizontal Slider.png
+Dependencies: []

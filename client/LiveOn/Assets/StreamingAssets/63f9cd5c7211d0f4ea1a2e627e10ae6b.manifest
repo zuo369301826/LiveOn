@@ -1,0 +1,16 @@
+ManifestFileVersion: 0
+CRC: 1434544752
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 0879d141b6d95b7d84da6ca16804fa30
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: f19fbf085e00d23fbc8d6cf7b345590b
+HashAppended: 0
+ClassTypes:
+- Class: 28
+  Script: {instanceID: 0}
+Assets:
+- Assets/NGUI/Editor/Preview/Control - Simple Vertical Scroll Bar.png
+Dependencies: []

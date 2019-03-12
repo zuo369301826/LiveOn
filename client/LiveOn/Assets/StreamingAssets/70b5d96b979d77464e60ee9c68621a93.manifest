@@ -1,0 +1,16 @@
+ManifestFileVersion: 0
+CRC: 4281328899
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: c4e2461abe8f0d71b808a9e4998c58d6
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 7e9ee104d6bb707fb2602b751e6f78b1
+HashAppended: 0
+ClassTypes:
+- Class: 48
+  Script: {instanceID: 0}
+Assets:
+- Assets/NGUI/Resources/Shaders/Unlit - Premultiplied Colored 3.shader
+Dependencies: []
