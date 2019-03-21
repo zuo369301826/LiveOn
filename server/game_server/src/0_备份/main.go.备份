@@ -1,0 +1,96 @@
+package main
+
+import (
+	"encoding/json"
+	"fmt"
+	"log"
+	"msql"
+	"net"
+)
+
+const (
+	//SERVERIP 服务器IP
+	SERVERIP = "127.0.0.1:1234"
+)
+
+//UserMsg 消息类型
+type UserMsg struct {
+	Ordle  int    `json:"order"`
+	Name   string `json:"name"`
+	Passwd string `json:"passwd"`
+}
+
+func serverHeadle(conn net.Conn) {
+	clientAddr := conn.RemoteAddr().String()
+	fmt.Println(clientAddr, "connect.")
+
+	defer func() {
+		conn.Close()
+		fmt.Println(clientAddr, "close.")
+	}()
+
+	buf := make([]byte, 1024)
+	for {
+		n, err := conn.Read(buf)
+		if err != nil {
+			return
+		}
+		fmt.Println("buf", string(buf[0:n]))
+		usermsg := &UserMsg{}
+		if err = json.Unmarshal(buf[:n], usermsg); err != nil {
+			log.Println("Unmarshal fail.")
+			continue
+		}
+		fmt.Println("msg", usermsg)
+
+		switch usermsg.Ordle {
+		case 0:
+			{
+				//注册
+				var user msql.UserData
+				user.Username = usermsg.Name
+				user.Password = usermsg.Passwd
+				if OK := msql.InsertUser(user); OK {
+					fmt.Println("install data suc.")
+					conn.Write([]byte("注册成功\n"))
+				} else {
+					fmt.Println("install data fail.")
+					conn.Write([]byte("注册失败\n"))
+				}
+
+			}
+		case 1:
+			{
+				//登录
+				if istrue := msql.IsPasswdTrueByUsername(usermsg.Name, usermsg.Passwd); istrue {
+					fmt.Println("passwd is ture.")
+					conn.Write([]byte("登录成功\n"))
+				} else {
+					fmt.Println("passwd is false.")
+					conn.Write([]byte("登录失败\n"))
+				}
+			}
+		}
+	}
+}
+
+func main() {
+	log.SetFlags(log.LstdFlags | log.Llongfile)
+
+	listen, err := net.Listen("tcp", SERVERIP)
+	if err != nil {
+		log.Panicln("listen err.", err)
+	}
+
+	fmt.Println("server success.")
+
+	for {
+		conn, err := listen.Accept()
+		if err != nil {
+			log.Println("Accept err.")
+			continue
+		}
+		fmt.Println("Accept success.")
+		go serverHeadle(conn)
+	}
+}
